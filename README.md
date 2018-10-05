@@ -9,8 +9,11 @@
 이메일 회원인증 (앞으로 로컬인증이라고 부르겠습니다) 을 구현하기 위해선 다음 API 들을 만들어주어야 합니다.
 
 POST /api/register/local: 회원가입 API
+
 POST /api/login/local: 로그인 API
+
 GET /exists/:key/:value: 이메일 / 아이디 중복확인
+
 POST /logout: 로그아웃
 
 2. JWT 이해 및 적용 
