@@ -12,20 +12,6 @@ const Router = require('koa-router');
 
 const books = new Router();
 
-/*
-books.get('/', (ctx, next) => {
-    ctx.body = 'GET ' +ctx.request.path;
-
-});
-*/
-
-// 여러 메소드 사용하기 TEST 
-/*
-const handler = (ctx, next)=>{
-    ctx.body = '${ctx.request.method} ${ctx.request.path}';
-};
-*/
-
 const booksCtrl = require('./books.controller');
 
 

@@ -3,12 +3,10 @@ require('dotenv').config(); // .env 파일에서 환경변수 불러오기
 const Koa = require('koa');
 const Router = require('koa-router');
 
+// 10.6 add 
 const app = new Koa();
 const router = new Router();
 const api = require('./api');
-// const Book = require('./models/book');
-//const Book = require('../../models/book');
-
 
 // 10.5 add 
 const mongoose = require('mongoose');
@@ -43,3 +41,16 @@ app.use(async ctx => {
     // 아무것도 없으면 {} return 
     ctx.body = ctx.request.body;
 });
+
+/*
+//10.6 aa SHA256 해시 함수 사용
+const crypto = require('crypto');
+
+const password = 'jess1130';
+const secret = 'MyScretKey123';
+
+const hashed = crypto.createHmac('sha256' , secret).update(password).digest('hex');
+
+console.log(hashed);
+
+*/
